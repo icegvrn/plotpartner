@@ -1,0 +1,297 @@
+{
+    "blocks": [
+        {
+            "id": "block_1",
+            "title": "Retour au camp",
+            "description": "Les survivants se retrouvent après des années.",
+            "position": {
+                "x": 100,
+                "y": 100
+            },
+            "width": 900,
+            "height": 500
+        },
+        {
+            "id": "block_2",
+            "title": "Autour du lac",
+            "description": "Le passé commence à remonter à la surface.",
+            "position": {
+                "x": 1100,
+                "y": 100
+            },
+            "width": 900,
+            "height": 500
+        },
+        {
+            "id": "block_3",
+            "title": "La chapelle engloutie",
+            "description": "Le cœur du mystère repose sous l'eau.",
+            "position": {
+                "x": 2100,
+                "y": 100
+            },
+            "width": 900,
+            "height": 500
+        }
+    ],
+    "characters": [
+        {
+            "id": "wesley",
+            "name": "Wesley Tucker"
+        },
+        {
+            "id": "marie",
+            "name": "Marie Derval"
+        },
+        {
+            "id": "julien",
+            "name": "Julien Morel"
+        }
+    ],
+    "objects": [
+        {
+            "id": "lettre",
+            "name": "Lettre mystérieuse"
+        },
+        {
+            "id": "photo",
+            "name": "Vieille photographie"
+        },
+        {
+            "id": "barque",
+            "name": "Barque usée"
+        },
+        {
+            "id": "relique",
+            "name": "Relique rituelle"
+        },
+        {
+            "id": "jeton",
+            "name": "Jeton de l'Abîme"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "scene_1",
+            "title": "Arrivée au camp",
+            "description": "Les survivants arrivent sous une pluie fine.",
+            "characters": [
+                "wesley",
+                "marie"
+            ],
+            "objects": [
+                "lettre"
+            ],
+            "blocks": {
+                "block_1": {
+                    "x": 120,
+                    "y": 120
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_2",
+                    "label": "Entrer dans la cabane"
+                }
+            ]
+        },
+        {
+            "id": "scene_2",
+            "title": "La cabane principale",
+            "description": "Des souvenirs troublants refont surface.",
+            "characters": [
+                "wesley"
+            ],
+            "objects": [
+                "photo"
+            ],
+            "blocks": {
+                "block_1": {
+                    "x": 400,
+                    "y": 120
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_3",
+                    "label": "Explorer l'étage"
+                },
+                {
+                    "target": "scene_4",
+                    "label": "Sortir vers le lac"
+                }
+            ]
+        },
+        {
+            "id": "scene_3",
+            "title": "L'étage abandonné",
+            "description": "Une odeur d'humidité flotte dans l'air.",
+            "characters": [
+                "marie"
+            ],
+            "objects": [],
+            "blocks": {
+                "block_1": {
+                    "x": 250,
+                    "y": 300
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_2",
+                    "label": "Redescendre"
+                }
+            ]
+        },
+        {
+            "id": "scene_4",
+            "title": "Au bord du lac",
+            "description": "L'eau est étrangement immobile.",
+            "characters": [
+                "wesley",
+                "julien"
+            ],
+            "objects": [
+                "jeton"
+            ],
+            "blocks": {
+                "block_2": {
+                    "x": 120,
+                    "y": 120
+                },
+                "block_1": {
+                    "x": 700,
+                    "y": 220
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_5",
+                    "label": "Inspecter la barque"
+                }
+            ]
+        },
+        {
+            "id": "scene_5",
+            "title": "La vieille barque",
+            "description": "Quelqu'un l'a utilisée récemment.",
+            "characters": [
+                "julien"
+            ],
+            "objects": [
+                "barque"
+            ],
+            "blocks": {
+                "block_2": {
+                    "x": 400,
+                    "y": 120
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_6",
+                    "label": "Ramer vers le centre"
+                }
+            ]
+        },
+        {
+            "id": "scene_6",
+            "title": "Au centre du lac",
+            "description": "L'eau devient sombre, presque visqueuse.",
+            "characters": [
+                "wesley",
+                "julien"
+            ],
+            "objects": [],
+            "blocks": {
+                "block_2": {
+                    "x": 250,
+                    "y": 300
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_7",
+                    "label": "Plonger"
+                }
+            ]
+        },
+        {
+            "id": "scene_7",
+            "title": "L'entrée submergée",
+            "description": "Une ouverture derrière les roseaux.",
+            "characters": [
+                "wesley"
+            ],
+            "objects": [
+                "jeton"
+            ],
+            "blocks": {
+                "block_3": {
+                    "x": 120,
+                    "y": 120
+                },
+                "block_2": {
+                    "x": 700,
+                    "y": 250
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_8",
+                    "label": "Descendre"
+                }
+            ]
+        },
+        {
+            "id": "scene_8",
+            "title": "La chapelle engloutie",
+            "description": "Des symboles gravés dans la pierre humide.",
+            "characters": [
+                "wesley",
+                "marie"
+            ],
+            "objects": [
+                "relique"
+            ],
+            "blocks": {
+                "block_3": {
+                    "x": 400,
+                    "y": 120
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_9",
+                    "label": "Approcher l'autel"
+                }
+            ]
+        },
+        {
+            "id": "scene_9",
+            "title": "Le rituel interrompu",
+            "description": "Quelque chose vous observe.",
+            "characters": [
+                "wesley",
+                "marie",
+                "julien"
+            ],
+            "objects": [
+                "relique",
+                "jeton"
+            ],
+            "blocks": {
+                "block_3": {
+                    "x": 250,
+                    "y": 300
+                }
+            },
+            "transitions": [
+                {
+                    "target": "scene_4",
+                    "label": "Fuir vers le lac"
+                }
+            ]
+        }
+    ]
+}
